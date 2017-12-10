@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
+from casionoFinder.views import ListCreateCasino
 from django.contrib import admin
 from rest_framework.urlpatterns import format_suffix_patterns
 from webapp import views
@@ -21,5 +22,6 @@ from webapp import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^employe/', views.employeesList.as_view()),
+    url(r'^api/casinos',ListCreateCasino.as_view(),name="list_casino" ),
 
 ]
