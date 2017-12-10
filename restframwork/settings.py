@@ -39,11 +39,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
    'rest_framework',
-   'webapp'
+   'webapp',
+    'django_extensions',
+    'corsheaders',
+    'casionoFinder',
+    'casionoLocator'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -78,8 +83,12 @@ WSGI_APPLICATION = 'restframwork.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME':'info',
+        'USER':'postgres',
+        'PASSWORD':'satej',
+        'HOST':'127.0.0.1',
+        'PORT':'5432'
     }
 }
 
@@ -120,4 +129,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+
+BASE_DIR=os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT='staticfiles'
+STATIC_URL='/static/'
 STATIC_URL = '/static/'
+STATICFILES_DIR={
+    os.path.join(BASE_DIR,'static')
+}
+CORS_ORIGIN_ALLOW_ALL=True
+CORS_ALLOW_CREDENTIALS=True
+
+
