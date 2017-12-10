@@ -1,0 +1,16 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="AnonymousGroup" enabled="false" level="TYPO" enabled_by_default="false" />
+    <inspection_tool class="DuplicateAlternationBranch" enabled="true" level="TYPO" enabled_by_default="true" />
+    <inspection_tool class="EmptyAlternationBranch" enabled="true" level="TYPO" enabled_by_default="true" />
+    <inspection_tool class="EscapedMetaCharacter" enabled="true" level="TYPO" enabled_by_default="true" />
+    <inspection_tool class="OctalEscape" enabled="true" level="TYPO" enabled_by_default="true" />
+    <inspection_tool class="PyArgumentEqualDefaultInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyProtectedMemberInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <scope name="Problems" level="WEAK WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="RepeatedSpace" enabled="true" level="TYPO" enabled_by_default="true" />
+    <inspection_tool class="SingleCharAlternation" enabled="true" level="TYPO" enabled_by_default="true" />
+  </profile>
+</component>
